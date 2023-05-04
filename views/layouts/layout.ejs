@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+<link rel="stylesheet" href="stylesheets/main.css">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,7 +8,11 @@
     <title>test</title>
 </head>
 <body>
-    <%- include('../partials/header.ejs') %>
-    <%- body %>
+    <div class="container">
+        <%- include('../partials/header.ejs') %>
+        <div class="inner-container">
+            <%- body %>
+        </div>
+    </div>
 </body>
 </html>
