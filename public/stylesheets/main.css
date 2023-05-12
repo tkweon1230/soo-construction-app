@@ -1,6 +1,7 @@
 @import 'shared/variables.css';
 @import 'shared/fonts.css';
 @import 'shared/header.css';
+@import 'shared/grid.css';
 
 :root {
     font-family: 'SSone', 'Helvetica Neue', Arial;
@@ -15,6 +16,15 @@
     max-width: 1200px;
     margin: auto;
     margin-bottom: 3rem;
+}
+
+.container-center-small {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    width: 50%;
+    margin: auto;
 }
 
 .inner-container {
