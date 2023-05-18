@@ -15,16 +15,14 @@
 .container {
     max-width: 1200px;
     margin: auto;
+    margin-top: 3rem;
     margin-bottom: 3rem;
 }
 
 .container-center-small {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
     width: 50%;
     margin: auto;
+    margin-bottom: 3rem;
 }
 
 .inner-container {
@@ -34,4 +32,8 @@
 .page-header {
     font-size: 2rem;
     font-weight: 500;
+}
+
+.cstm-text {
+    line-height: 1.7;
 }
