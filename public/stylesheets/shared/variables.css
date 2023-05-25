@@ -1,4 +1,7 @@
 :root {
-    --color-text-light:#9a9eb8;
+    --color-text-light:hsla( 211,18%,33% ,1);
     --color-title-light:#aab2df;
+    --nav-font-weight: 600;
+    --nav-font-size: 15px;
+    --text-size-standard: 17px;
 }

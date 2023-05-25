@@ -1,10 +1,10 @@
 @import 'shared/variables.css';
-@import 'shared/fonts.css';
 @import 'shared/header.css';
 @import 'shared/grid.css';
 
 :root {
     font-family: 'SSone', 'Helvetica Neue', Arial;
+    font-weight: 500;
     color: var(--color-text-light);
 }
 
@@ -32,8 +32,10 @@
 .page-header {
     font-size: 2rem;
     font-weight: 500;
+    color: #242632;
 }
 
 .cstm-text {
     line-height: 1.7;
+    font-size: var(--text-size-standard);
 }

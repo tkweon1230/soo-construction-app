@@ -18,14 +18,13 @@ mongoose.connect(process.env.DATABASE_URL, { useNewUrlParser: true })
 const db = mongoose.connection
 db.on('error', (error) => console.error(error))
 db.once('open', (error) => console.log('Connected to DB'))
-// app.use(express.json())
 
-//const homeRouter = require('./routes/home')
-//app.use('/', homeRouter)
 const indexRouter = require('./routes/index')
 const contactRouter = require('./routes/contact')
+const ourWorkRouter = require('./routes/our-work')
 
 app.use('/', indexRouter)
 app.use('/contact', contactRouter)
+app.use('/our-work', ourWorkRouter)
 
 app.listen(process.env.PORT || 3000)
