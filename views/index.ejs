@@ -11,16 +11,7 @@
     </div>
 </div>
 <div class="grid-container">
-    <img src="/uploads/images/sample.jpg" alt="Sample Image">
-    <img src="/uploads/images/sample.jpg" alt="Sample Image">
-    <img src="/uploads/images/sample.jpg" alt="Sample Image">
-    <img src="/uploads/images/sample.jpg" alt="Sample Image">
-    <img src="/uploads/images/sample.jpg" alt="Sample Image">
-    <img src="/uploads/images/sample.jpg" alt="Sample Image">
-    <img src="/uploads/images/sample.jpg" alt="Sample Image">
-    <img src="/uploads/images/sample.jpg" alt="Sample Image">
-    <img src="/uploads/images/sample.jpg" alt="Sample Image">
-    <img src="/uploads/images/sample.jpg" alt="Sample Image">
-    <img src="/uploads/images/sample.jpg" alt="Sample Image">
-    <img src="/uploads/images/sample.jpg" alt="Sample Image">
+    <% imagePaths.forEach((imagePath) => { %>
+        <img src="/uploads/images/album1/resized/<%= imagePath %>" alt="Image">
+    <% }); %>
 </div>

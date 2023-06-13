@@ -1,0 +1,11 @@
+<div class="container-center-small">
+    <h2 class="page-header">gallery page</h2>
+    <div>
+        Text
+    </div>
+</div>
+<div class="grid-container">
+    <% imagePaths.forEach((imagePath) => { %>
+        <img src="/uploads/images/album1/resized/<%= imagePath %>" alt="Image">
+    <% }); %>
+</div>

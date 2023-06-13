@@ -13,6 +13,48 @@ app.use(expressLayouts)
 app.use(express.static('public'))
 app.use(bodyParser.urlencoded({ limit: '10mb', extended: false }))
 
+
+const fs = require('fs');
+const sharp = require('sharp');
+const path = require('path');
+
+const sourceDir = './public/uploads/images/album1';
+const targetDir = './public/uploads/images/album1/resized';
+const width = 300;
+const height = 300;
+
+// Create the target directory if it doesn't exist
+if (!fs.existsSync(targetDir)) {
+  fs.mkdirSync(targetDir);
+}
+
+// Read the files in the source directory
+fs.readdir(sourceDir, (err, files) => {
+  if (err) {
+    console.error('Error reading directory:', err);
+    return;
+  }
+
+  // Process each file
+  files.forEach((file) => {
+    const sourcePath = path.join(sourceDir, file);
+    const targetPath = path.join(targetDir, file);
+
+    // Resize the image
+    sharp(sourcePath)
+      .rotate()
+      .resize(width, height)
+      .toFile(targetPath, (resizeErr) => {
+        if (resizeErr) {
+          console.error('Error resizing image:', resizeErr);
+          return;
+        }
+        console.log('Image resized:', file);
+      });
+  });
+});
+
+
 const mongoose = require('mongoose')
 mongoose.connect(process.env.DATABASE_URL, { useNewUrlParser: true })
 const db = mongoose.connection
@@ -21,10 +63,10 @@ db.once('open', (error) => console.log('Connected to DB'))
 
 const indexRouter = require('./routes/index')
 const contactRouter = require('./routes/contact')
-const ourWorkRouter = require('./routes/our-work')
+const galleryRouter = require('./routes/gallery')
 
 app.use('/', indexRouter)
 app.use('/contact', contactRouter)
-app.use('/our-work', ourWorkRouter)
+app.use('/gallery', galleryRouter)
 
 app.listen(process.env.PORT || 3000)
