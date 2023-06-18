@@ -20,8 +20,8 @@ const path = require('path');
 
 const sourceDir = './public/uploads/images/album1';
 const targetDir = './public/uploads/images/album1/resized';
-const width = 300;
-const height = 300;
+const width = 350;
+const height = 350;
 
 // Create the target directory if it doesn't exist
 if (!fs.existsSync(targetDir)) {

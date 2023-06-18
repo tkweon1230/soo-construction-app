@@ -39,3 +39,7 @@
     line-height: 1.7;
     font-size: var(--text-size-standard);
 }
+
+.center-header {
+    text-align: center;
+}
