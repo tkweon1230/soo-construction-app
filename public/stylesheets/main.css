@@ -1,6 +1,7 @@
 @import 'shared/variables.css';
 @import 'shared/header.css';
 @import 'shared/grid.css';
+@import 'shared/landing.css';
 
 :root {
     font-family: 'SSone', 'Helvetica Neue', Arial;
