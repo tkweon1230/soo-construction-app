@@ -64,9 +64,11 @@ db.once('open', (error) => console.log('Connected to DB'))
 const indexRouter = require('./routes/index')
 const contactRouter = require('./routes/contact')
 const galleryRouter = require('./routes/gallery')
+const homeAdditionGalleryRouter = require('./routes/home-addition-gallery')
 
 app.use('/', indexRouter)
 app.use('/contact', contactRouter)
 app.use('/gallery', galleryRouter)
+app.use('/home-addition-gallery', homeAdditionGalleryRouter)
 
 app.listen(process.env.PORT || 3000)
