@@ -3,7 +3,7 @@ const router = express.Router();
 
 router.get('/', (req, res) => {
   const fs = require('fs');
-  const folderPath = './public/uploads/images/roofing-images';
+  const folderPath = './public/uploads/images/repairs-images';
 
   fs.readdir(folderPath, (err, files) => {
     if (err) {
@@ -15,7 +15,7 @@ router.get('/', (req, res) => {
   .filter((file) => file.endsWith('.jpg'))
   .map((file) => file);
 
-    res.render('roofing-gallery/index', { imagePaths });
+    res.render('repairs-gallery/index', { imagePaths });
   });
 });
 

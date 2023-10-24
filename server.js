@@ -65,10 +65,17 @@ const indexRouter = require('./routes/index')
 const contactRouter = require('./routes/contact')
 const galleryRouter = require('./routes/gallery')
 const homeAdditionGalleryRouter = require('./routes/home-addition-gallery')
+const repairsGalleryRouter = require('./routes/repairs-gallery')
+const roofingGalleryRouter = require('./routes/roofing-gallery')
 
 app.use('/', indexRouter)
 app.use('/contact', contactRouter)
 app.use('/gallery', galleryRouter)
 app.use('/home-addition-gallery', homeAdditionGalleryRouter)
+app.use('/repairs-gallery', repairsGalleryRouter)
+app.use('/roofing-gallery', roofingGalleryRouter)
 
-app.listen(process.env.PORT || 3000)
+// app.listen(process.env.PORT || 3000)
+app.listen(process.env.PORT || 3000, function(){
+  console.log("Express server listening on port %d in %s mode", this.address().port, app.settings.env);
+});
